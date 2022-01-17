@@ -3,7 +3,7 @@ body {
   color: #fff;
   margin: 0;
   padding-right: 0;
-  background-image: url("D:/Github_repo/Challenge/assets/home/background-home-desktop.jpg");
+  background-image: url("./assets/home/background-home-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -152,7 +152,7 @@ a:hover {
 
   /* changing the backgroun image */
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/home/background-home-tablet.jpg");
+    background-image: url("./assets/home/background-home-tablet.jpg");
   }
 
   /* making the navline collapse */
@@ -223,7 +223,7 @@ a:hover {
 
   /* changing the bg img*/
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/home/background-home-mobile.jpg");
+    background-image: url("./assets/home/background-home-mobile.jpg");
   }
   a:hover {
     border-bottom: none;
