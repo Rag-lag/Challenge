@@ -3,7 +3,7 @@ body {
   color: #fff;
   margin: 0;
   padding-right: 0;
-  background-image: url("D:/Github_repo/Challenge/assets/destination/background-destination-desktop.jpg");
+  background-image: url("../assets/destination/background-destination-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -206,7 +206,7 @@ body {
 /* making page responsive */
 @media (max-width:1230px) {
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/destination/background-destination-tablet.jpg");
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
   }
 
   .navbar {
@@ -251,7 +251,7 @@ body {
 
   /* changing the bg img*/
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/destination/background-destination-mobile.jpg");
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
   }
   .link:hover {
     border-bottom: none;

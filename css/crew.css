@@ -3,7 +3,7 @@ body {
   color: #fff;
   margin: 0;
   padding-right: 0;
-  background-image: url("D:/Github_repo/Challenge/assets/crew/background-crew-desktop.jpg");
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -168,7 +168,7 @@ body {
 /* making site responsive */
 @media (max-width:1230px) {
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/crew/background-crew-tablet.jpg");
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
   }
 
   .navbar {
@@ -223,7 +223,7 @@ body {
 
 @media (max-width:650px) {
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/crew/background-crew-mobile.jpg");
+    background-image: url("../assets/crew/background-crew-mobile.jpg");
   }
   .link:hover {
     border-bottom: none;

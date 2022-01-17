@@ -3,7 +3,7 @@ body {
   color: #fff;
   margin: 0;
   padding-right: 0;
-  background-image: url("D:/Github_repo/Challenge/assets/technology/background-technology-desktop.jpg");
+  background-image: url("../assets/technology/background-technology-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -181,7 +181,7 @@ body {
 
 @media (max-width:1230px) {
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/technology/background-technology-tablet.jpg");
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
   }
 
   .navbar {
@@ -239,7 +239,7 @@ body {
 
 @media (max-width:650px) {
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/technology/background-technology-mobile.jpg");
+    background-image: url("../assets/technology/background-technology-mobile.jpg");
   }
 
   .link:hover {
