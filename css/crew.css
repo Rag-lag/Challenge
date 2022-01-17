@@ -267,14 +267,16 @@ body {
     visibility: collapse;
     position: absolute;
     z-index: 2;
-    right: 20px;
+    left:360px;
+    right: 10px;
     top: 100px;
   }
 
   .hamburger {
     visibility: visible;
     position: absolute;
-    right:30px;
+    left: 380px;
+    right:0px;
     top:70px;
     cursor: pointer;
     z-index: 1;
@@ -282,6 +284,7 @@ body {
   .mainbody {
     grid-template-areas: "right""left";
     height: 80rem;
+    padding-left: 25px;
   }
 
   .mainbody-right {

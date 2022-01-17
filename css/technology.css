@@ -283,21 +283,24 @@ body {
     /* align-items: flex-end; */
     visibility: collapse;
     position: absolute;
-    right: 20px;
+    z-index: 2;
+    left:360px;
+    right: 10px;
     top: 100px;
   }
 
   .hamburger {
     visibility: visible;
     position: absolute;
-    right: 30px;
-    top: 70px;
+    left: 380px;
+    right:0px;
+    top:70px;
     cursor: pointer;
     z-index: 1;
   }
   .mainbody {
-    height: 70rem;
-    padding-left: 10px;
+    height: 80rem;
+    padding-left: 25px;
   }
 
   .space-launch {

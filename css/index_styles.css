@@ -265,28 +265,31 @@ a:hover {
     /* align-items: flex-end; */
     visibility: collapse;
     position: absolute;
-    right: 20px;
+    z-index: 2;
+    left:360px;
+    right: 10px;
     top: 100px;
   }
 
   .hamburger {
     visibility: visible;
     position: absolute;
-    right:30px;
+    left: 380px;
+    right:0px;
     top:70px;
     cursor: pointer;
     z-index: 1;
   }
-
   .mainbody {
     height: 60rem;
+    padding-left: 30px;
   }
 
   .mainbody-right {
     /* padding-left: 0; */
     /* text-align: center; */
     padding: 0;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
     margin: auto;
   }
   .mainbody-left-md-heading{
