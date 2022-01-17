@@ -1,9 +1,9 @@
-/* Adding background image to the body  */
+/* bg img */
 body {
   color: #fff;
   margin: 0;
   padding-right: 0;
-  background-image: url("D:/Github_repo/Challenge/assets/home/background-home-desktop.jpg");
+  background-image: url("D:/Github_repo/Challenge/assets/destination/background-destination-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -11,13 +11,13 @@ body {
   height: 100%;
 }
 
-/* Dealing with the navigation bar */
+/* navigation bar */
 .navbar {
   position: relative;
   list-style: none;
   height: 100px;
   margin-top: 44px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .navbar-logo {
@@ -56,18 +56,17 @@ body {
   width: 59%;
 }
 
-a {
+.link {
   font-family: 'Oswald', sans-serif;
   text-decoration: none;
   color: #A3A1A8;
   padding-bottom: 35px;
 }
 
-a:hover {
+.link:hover {
   border-bottom: 3px solid;
   color: white;
 }
-
 .close {
   visibility: collapse;
   border: none;
@@ -81,81 +80,135 @@ a:hover {
   background: rgba(255,255,255,0);
 }
 
-/* Arranging the main body of home page */
+/* Mainbody */
+/* Pick destination */
+.pick-destination {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  margin-left: 150px;
+  margin-bottom: 50px;
+}
+
+.grey-num {
+  color: #A3A1A8;
+}
+
+/* Arranging the main body of destination page */
 .mainbody {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
   grid-template-areas: "left right";
-  height: 30rem;
+  height: 28rem;
 }
 
 .mainbody-left {
   grid-area: left;
-  padding-left: 200px;
+  /* padding-left: 200px; */
   display: flex;
-  flex-direction: column;
-  gap: 0px
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  /* gap: 0px */
 }
 
 .mainbody-right {
   grid-area: right;
-  padding-left: 270px;
-  padding-top: 200px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% 25% 35% 25%;
+  grid-template-areas: "navbar"
+    "name"
+    "info"
+    "dist-time";
+  /* padding-left: 270px;
+  padding-top: 200px; */
 }
 
-.mainbody-left-md-heading {
-  margin-top: 80px;
-  margin-bottom: 0;
-  font-size: 1.8rem;
-  font-weight: 600;
+.planetary-obj-img {
+  height: 85%;
+}
+
+.mainbody-right-navbar {
+  grid-area: navbar;
+  color: #A3A1A8;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  display: flex;
+  height: 40px;
+  gap: 2rem;
+}
+
+.link-active {
+  color: white;
+  border-bottom: 2px solid;
+}
+
+.mainbody-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mainbody-right-destination {
+  grid-area: name;
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.mainbody-right-destination-info {
+  color: #A8C0CE;
+  grid-area: info;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  width: 64%;
+  line-height: 1.5;
+  border-bottom: 2px solid;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.mainbody-right-destination-distntime {
+  grid-area: dist-time;
+  display: flex;
+  padding-top: 20px;
+}
+
+/* .mainbody-right-destination-distntime >*{
+  flex:1;
+} */
+.avg-distance {
+  width: 40%;
+}
+
+.distance-heading {
   font-family: 'Oswald', sans-serif;
   color: #A3A1A8;
+  padding-bottom: 10px;
 }
 
-.mainbody-left-bg-heading {
-  padding-left: 10px;
-  font-size: 8rem;
-  color: white;
-  font-family: 'Cormorant Garamond', serif;
-  margin: 0;
+.distance {
+  font-size: 2.5rem;
 }
 
-.mainbody-left-sm-heading {
-  font-size: 1.2rem;
+.time-heading {
   font-family: 'Oswald', sans-serif;
-  color: #A8C0CE;
-  width: 75%;
+  color: #A3A1A8;
+  padding-bottom: 10px;
 }
 
-.circle {
-  background-color: white;
-  color: black;
-  border-radius: 50%;
-  width: 230px;
-  height: 230px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+.time {
+  font-size: 2.5rem;
 }
 
-.explore {
-  font-size: 2rem;
-  font-family: 'Cormorant Garamond', serif;
-  margin-top: 100px;
-  height: 50px;
-  text-align: center;
+.est-time {
+  width: 40%;
 }
 
-/* Using media queries to make site responsive-tablet */
-@media (max-width:1200px) {
-
-  /* changing the backgroun image */
+/* making page responsive */
+@media (max-width:1230px) {
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/home/background-home-tablet.jpg");
+    background-image: url("D:/Github_repo/Challenge/assets/destination/background-destination-tablet.jpg");
   }
 
-  /* making the navline collapse */
   .navbar {
     margin-bottom: 50px;
   }
@@ -170,62 +223,37 @@ a:hover {
     width: 70%;
   }
 
-  /* making main body adjust */
+  .pick-destination {
+    margin-left: 25px;
+  }
+
   .mainbody {
+    display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "left"
-      "right";
-    /* padding-top: 100px; */
-    height: 100%;
+    grid-template-areas: "left ""right";
+    height: auto;
   }
 
-  .mainbody-left {
-    padding-left: 0;
+  .mainbody-right>* {
     text-align: center;
     justify-content: center;
-    align-items: center;
   }
 
-  .mainbody-right {
-    /* padding-left: 0; */
-    /* text-align: center; */
-    padding: 0;
-    padding-top: 200px;
+  .mainbody-right-destination-info {
     margin: auto;
-  }
-
-  .mainbody-left-md-heading {
-    font-size: 2rem;
-  }
-
-  .mainbody-left-bg-heading {
-    font-size: 9rem;
-  }
-
-  .mainbody-left-sm-heading {
-    font-size: 1.5rem;
-    width: 60%;
-  }
-
-  .circle {
-    width: 300px;
-    height: 300px;
-  }
-
-  .explore {
-    margin-top: 120px;
+    width: 85%;
+    padding-bottom: 50px;
   }
 }
 
-/* Using media queries to make site responsive-mobile */
 @media (max-width:650px) {
 
   /* changing the bg img*/
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/home/background-home-mobile.jpg");
+    background-image: url("D:/Github_repo/Challenge/assets/destination/background-destination-mobile.jpg");
   }
-  a:hover {
+  .link:hover {
     border-bottom: none;
     color: white;
   }
@@ -278,25 +306,18 @@ a:hover {
     z-index: 1;
   }
 
-  .mainbody {
-    height: 60rem;
+  .mainbody-right{
+    height: 40rem;
   }
-
-  .mainbody-right {
-    /* padding-left: 0; */
-    /* text-align: center; */
-    padding: 0;
-    padding-bottom: 50px;
-    margin: auto;
+  .mainbody-right-destination-info {
+    height: 50%;
   }
-  .mainbody-left-md-heading{
-    font-size: 1.8rem;
+  .mainbody-right-destination-distntime {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .mainbody-left-bg-heading{
-    font-size: 7rem;
-  }
-  .mainbody-left-sm-heading {
-    font-size: 1.4rem;
-    width: 80%;
+  .avg-distance {
+    margin-bottom: 20px;
   }
 }

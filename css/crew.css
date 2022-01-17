@@ -1,23 +1,23 @@
-/* Adding background image to the body  */
+/* bg img */
 body {
   color: #fff;
   margin: 0;
   padding-right: 0;
-  background-image: url("D:/Github_repo/Challenge/assets/home/background-home-desktop.jpg");
+  background-image: url("D:/Github_repo/Challenge/assets/crew/background-crew-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
-/* Dealing with the navigation bar */
+/* navigation bar */
 .navbar {
   position: relative;
   list-style: none;
   height: 100px;
   margin-top: 44px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .navbar-logo {
@@ -56,18 +56,17 @@ body {
   width: 59%;
 }
 
-a {
+.link {
   font-family: 'Oswald', sans-serif;
   text-decoration: none;
   color: #A3A1A8;
   padding-bottom: 35px;
 }
 
-a:hover {
+.link:hover {
   border-bottom: 3px solid;
   color: white;
 }
-
 .close {
   visibility: collapse;
   border: none;
@@ -80,82 +79,98 @@ a:hover {
   border: none;
   background: rgba(255,255,255,0);
 }
+/* mainbody */
+/* meet ur crew */
+.meet-crew {
+  letter-spacing: 2px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  margin-left: 150px;
+  margin-bottom: 50px;
+}
 
-/* Arranging the main body of home page */
+.grey-num {
+  color: #A3A1A8;
+}
+
+/* arranging the mainbody of crew page */
 .mainbody {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
   grid-template-areas: "left right";
-  height: 30rem;
+  height: 29.3rem;
 }
 
 .mainbody-left {
   grid-area: left;
-  padding-left: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 0px
+  padding-left: 150px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 25% 20% 40% 15%;
+  grid-template-areas: "rank"
+    "name"
+    "about"
+    "navbar";
 }
 
 .mainbody-right {
   grid-area: right;
-  padding-left: 270px;
-  padding-top: 200px;
+  position: relative;
 }
 
-.mainbody-left-md-heading {
-  margin-top: 80px;
-  margin-bottom: 0;
-  font-size: 1.8rem;
-  font-weight: 600;
-  font-family: 'Oswald', sans-serif;
+.crew-img {
+  height: 36rem;
+  position: absolute;
+  margin-bottom: 1px;
+  bottom: 0px;
+  left: 100px;
+}
+
+.mainbody-left-rank {
+  grid-area: rank;
   color: #A3A1A8;
-}
-
-.mainbody-left-bg-heading {
-  padding-left: 10px;
-  font-size: 8rem;
-  color: white;
+  font-size: 2.3rem;
+  padding-top: 60px;
   font-family: 'Cormorant Garamond', serif;
-  margin: 0;
 }
 
-.mainbody-left-sm-heading {
-  font-size: 1.2rem;
-  font-family: 'Oswald', sans-serif;
+.mainbody-left-name {
+  grid-area: name;
+  font-size: 3rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.mainbody-left-about {
+  grid-area: about;
+  width: 60%;
+  line-height: 1.5;
   color: #A8C0CE;
-  width: 75%;
 }
 
-.circle {
-  background-color: white;
-  color: black;
-  border-radius: 50%;
-  width: 230px;
-  height: 230px;
+.mainbody-left-navbar {
+  grid-area: navbar;
   display: flex;
-  justify-content: center;
-  align-content: center;
+  gap: 1.5rem;
 }
 
-.explore {
-  font-size: 2rem;
-  font-family: 'Cormorant Garamond', serif;
-  margin-top: 100px;
-  height: 50px;
-  text-align: center;
+.nav-circle {
+  background-color: #A3A1A8;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
 }
 
-/* Using media queries to make site responsive-tablet */
-@media (max-width:1200px) {
+.nav-circle-active {
+  background-color: white;
+}
 
-  /* changing the backgroun image */
+/* making site responsive */
+@media (max-width:1230px) {
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/home/background-home-tablet.jpg");
+    background-image: url("D:/Github_repo/Challenge/assets/crew/background-crew-tablet.jpg");
   }
 
-  /* making the navline collapse */
   .navbar {
     margin-bottom: 50px;
   }
@@ -170,62 +185,47 @@ a:hover {
     width: 70%;
   }
 
-  /* making main body adjust */
   .mainbody {
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "left"
-      "right";
-    /* padding-top: 100px; */
-    height: 100%;
+    grid-template-rows: 40% 60%;
+    grid-template-areas: "left""right";
+    height: 57rem;
+  }
+
+  .crew-img {
+    left: 25%;
+    top: 10%;
+    z-index: -1;
+  }
+
+  .mainbody-left>* {
+    text-align: center;
+    justify-content: center;
+    margin: auto;
   }
 
   .mainbody-left {
     padding-left: 0;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
   }
 
-  .mainbody-right {
-    /* padding-left: 0; */
-    /* text-align: center; */
-    padding: 0;
-    padding-top: 200px;
-    margin: auto;
+  .mainbody-left-rank {
+    padding-top: 40px;
   }
 
-  .mainbody-left-md-heading {
-    font-size: 2rem;
+  .mainbody-left-about {
+    font-size: 1.3rem;
   }
 
-  .mainbody-left-bg-heading {
-    font-size: 9rem;
-  }
-
-  .mainbody-left-sm-heading {
-    font-size: 1.5rem;
-    width: 60%;
-  }
-
-  .circle {
-    width: 300px;
-    height: 300px;
-  }
-
-  .explore {
-    margin-top: 120px;
+  .meet-crew {
+    margin-left: 50px;
   }
 }
 
-/* Using media queries to make site responsive-mobile */
 @media (max-width:650px) {
-
-  /* changing the bg img*/
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/home/background-home-mobile.jpg");
+    background-image: url("D:/Github_repo/Challenge/assets/crew/background-crew-mobile.jpg");
   }
-  a:hover {
+  .link:hover {
     border-bottom: none;
     color: white;
   }
@@ -247,6 +247,7 @@ a:hover {
     backdrop-filter: blur(15px);
     flex-direction: column;
     position: absolute;
+    z-index: 1;
     /* margin-bottom: 100px; */
     /* height: 65rem; */
     visibility: collapse;
@@ -265,6 +266,7 @@ a:hover {
     /* align-items: flex-end; */
     visibility: collapse;
     position: absolute;
+    z-index: 2;
     right: 20px;
     top: 100px;
   }
@@ -277,26 +279,46 @@ a:hover {
     cursor: pointer;
     z-index: 1;
   }
-
   .mainbody {
-    height: 60rem;
+    grid-template-areas: "right""left";
+    height: 80rem;
   }
 
   .mainbody-right {
-    /* padding-left: 0; */
-    /* text-align: center; */
-    padding: 0;
-    padding-bottom: 50px;
+    /* padding-left: 70px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .crew-img {
+    align-self: center;
+    position: static;
     margin: auto;
+    height: 30rem;
+    margin-bottom: 0;
   }
-  .mainbody-left-md-heading{
-    font-size: 1.8rem;
+
+  .mainbody-left {
+    border-top: 2px solid;
+    border-color: rgba(255, 255, 255, 0.1);
+    grid-template-rows: 15% 25% 20% 40%;
+    grid-template-areas: "navbar"
+      "rank"
+      "name"
+      "about";
   }
-  .mainbody-left-bg-heading{
-    font-size: 7rem;
+  .mainbody-left-rank{
+    font-size: 1.9rem;
   }
-  .mainbody-left-sm-heading {
-    font-size: 1.4rem;
+  .mainbody-left-name{
+    font-size: 3rem;
+  }
+  .mainbody-left-about{
     width: 80%;
+  }
+  .nav-circle {
+    width: 20px;
+    height: 20px;
   }
 }

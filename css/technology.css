@@ -1,23 +1,23 @@
-/* Adding background image to the body  */
+/* bg img */
 body {
   color: #fff;
   margin: 0;
   padding-right: 0;
-  background-image: url("D:/Github_repo/Challenge/assets/home/background-home-desktop.jpg");
+  background-image: url("D:/Github_repo/Challenge/assets/technology/background-technology-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
-/* Dealing with the navigation bar */
+/* navigation bar */
 .navbar {
   position: relative;
   list-style: none;
   height: 100px;
   margin-top: 44px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .navbar-logo {
@@ -56,14 +56,14 @@ body {
   width: 59%;
 }
 
-a {
+.link {
   font-family: 'Oswald', sans-serif;
   text-decoration: none;
   color: #A3A1A8;
   padding-bottom: 35px;
 }
 
-a:hover {
+.link:hover {
   border-bottom: 3px solid;
   color: white;
 }
@@ -71,91 +71,119 @@ a:hover {
 .close {
   visibility: collapse;
   border: none;
-  background: rgba(255,255,255,0);
+  background: rgba(255, 255, 255, 0);
   cursor: pointer;
 }
 
 .hamburger {
   visibility: collapse;
   border: none;
-  background: rgba(255,255,255,0);
+  background: rgba(255, 255, 255, 0);
 }
 
-/* Arranging the main body of home page */
+/* mainbody */
+/* space launch101 */
+.space-launch {
+  letter-spacing: 2px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  margin-left: 150px;
+  margin-bottom: 50px;
+}
+
+.grey-num {
+  color: #A3A1A8;
+}
+
+/* arranging mainbody of technology page */
 .mainbody {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 65% 35%;
   grid-template-rows: 100%;
   grid-template-areas: "left right";
-  height: 30rem;
+  height: 29rem;
 }
 
 .mainbody-left {
+  padding-top: 100px;
   grid-area: left;
-  padding-left: 200px;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 35% 65%;
+  grid-template-areas: "slide content";
+}
+
+.mainbody-left-content {
+  grid-area: content;
   display: flex;
   flex-direction: column;
-  gap: 0px
+  gap: 1.1rem;
 }
 
-.mainbody-right {
-  grid-area: right;
-  padding-left: 270px;
-  padding-top: 200px;
-}
-
-.mainbody-left-md-heading {
-  margin-top: 80px;
-  margin-bottom: 0;
-  font-size: 1.8rem;
-  font-weight: 600;
+.content-terminology {
+  font-size: 1.3rem;
   font-family: 'Oswald', sans-serif;
   color: #A3A1A8;
 }
 
-.mainbody-left-bg-heading {
-  padding-left: 10px;
-  font-size: 8rem;
-  color: white;
+.content-name {
+  font-size: 4rem;
   font-family: 'Cormorant Garamond', serif;
-  margin: 0;
 }
 
-.mainbody-left-sm-heading {
-  font-size: 1.2rem;
-  font-family: 'Oswald', sans-serif;
+.content-info {
+  font-size: 1.1rem;
+  width: 63%;
+  line-height: 1.5;
   color: #A8C0CE;
-  width: 75%;
 }
 
-.circle {
-  background-color: white;
-  color: black;
+.slide-num {
+  padding-left: 150px;
+  grid-area: slide;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+}
+
+.slide-link {
+  text-decoration: none;
+  color: white;
+  width: 70px;
+}
+
+.slide-num-circle {
   border-radius: 50%;
-  width: 230px;
-  height: 230px;
+  border: 2px solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  width: 70px;
+  height: 70px;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  font-size: 1.3rem;
 }
 
-.explore {
-  font-size: 2rem;
-  font-family: 'Cormorant Garamond', serif;
-  margin-top: 100px;
-  height: 50px;
-  text-align: center;
+.circle-active {
+  background-color: white;
+  color: black;
+  border: none;
 }
 
-/* Using media queries to make site responsive-tablet */
-@media (max-width:1200px) {
+.mainbody-right {
+  grid-area: right;
+  text-align: right;
+}
 
-  /* changing the backgroun image */
+.technology-img {
+  height: 100%;
+}
+
+@media (max-width:1230px) {
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/home/background-home-tablet.jpg");
+    background-image: url("D:/Github_repo/Challenge/assets/technology/background-technology-tablet.jpg");
   }
 
-  /* making the navline collapse */
   .navbar {
     margin-bottom: 50px;
   }
@@ -170,62 +198,51 @@ a:hover {
     width: 70%;
   }
 
-  /* making main body adjust */
-  .mainbody {
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "left"
-      "right";
-    /* padding-top: 100px; */
-    height: 100%;
+  .space-launch {
+    margin-left: 50px;
   }
 
-  .mainbody-left {
-    padding-left: 0;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  .mainbody {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "right""left";
+    width: 100%;
+    height: 55rem;
   }
 
   .mainbody-right {
-    /* padding-left: 0; */
-    /* text-align: center; */
-    padding: 0;
-    padding-top: 200px;
-    margin: auto;
+    text-align: center;
   }
 
-  .mainbody-left-md-heading {
-    font-size: 2rem;
+  .mainbody-left {
+    padding-top: 0px;
+    display: grid;
+    grid-template-rows: 35% 65%;
+    grid-template-columns: 100%;
+    grid-template-areas: "slide""content";
+    align-items: center;
+    justify-content: center;
   }
 
-  .mainbody-left-bg-heading {
-    font-size: 9rem;
+  .slide-num {
+    flex-direction: row;
+    padding-left: 0;
+    justify-content: center;
   }
 
-  .mainbody-left-sm-heading {
-    font-size: 1.5rem;
-    width: 60%;
-  }
-
-  .circle {
-    width: 300px;
-    height: 300px;
-  }
-
-  .explore {
-    margin-top: 120px;
+  .mainbody-left-content {
+    text-align: center;
+    align-items: center;
   }
 }
 
-/* Using media queries to make site responsive-mobile */
 @media (max-width:650px) {
-
-  /* changing the bg img*/
   body {
-    background-image: url("D:/Github_repo/Challenge/assets/home/background-home-mobile.jpg");
+    background-image: url("D:/Github_repo/Challenge/assets/technology/background-technology-mobile.jpg");
   }
-  a:hover {
+
+  .link:hover {
     border-bottom: none;
     color: white;
   }
@@ -247,6 +264,8 @@ a:hover {
     backdrop-filter: blur(15px);
     flex-direction: column;
     position: absolute;
+    /* z-index: 1; */
+
     /* margin-bottom: 100px; */
     /* height: 65rem; */
     visibility: collapse;
@@ -272,31 +291,30 @@ a:hover {
   .hamburger {
     visibility: visible;
     position: absolute;
-    right:30px;
-    top:70px;
+    right: 30px;
+    top: 70px;
     cursor: pointer;
     z-index: 1;
   }
-
   .mainbody {
-    height: 60rem;
+    height: 70rem;
+    padding-left: 10px;
   }
 
-  .mainbody-right {
-    /* padding-left: 0; */
-    /* text-align: center; */
-    padding: 0;
-    padding-bottom: 50px;
-    margin: auto;
+  .space-launch {
+    text-align: center;
   }
-  .mainbody-left-md-heading{
-    font-size: 1.8rem;
+
+  .content-name {
+    font-size: 2.5rem;
   }
-  .mainbody-left-bg-heading{
-    font-size: 7rem;
-  }
-  .mainbody-left-sm-heading {
+
+  .content-info {
     font-size: 1.4rem;
     width: 80%;
+  }
+
+  .technology-img {
+    width: 100%;
   }
 }

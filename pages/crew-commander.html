@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="D:\Github_repo\Challenge\assets\favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Oswald&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="D:\Github_repo\Challenge\css\crew.css">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
   <title>Frontend Mentor | Space tourism website</title>
 </head>
+
 <body>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+  <ul class="navbar">
+    <li class="navbar-logo"><img class="logo" src="D:\Github_repo\Challenge\assets\shared\logo.svg" alt=""> </li>
+    <span class="navbar-line"></span>
 
-  02 Meet your crew
+    <li class="navbar-links">
+      <div class="navbar-page "><a class="link" href="D:\Github_repo\Challenge\index.html"> 00 &nbsp;&nbsp; Home</a> </div>
+      <div class="navbar-page"><a  class="link" href="D:/Github_repo/Challenge/pages/destination-moon.html"> 01 &nbsp;&nbsp; Destination</a> </div>
+      <div class="navbar-page"><a  class="link"href="D:\Github_repo\Challenge\pages\crew-commander.html"> 02 &nbsp;&nbsp; Crew</a> </div>
+      <div class="navbar-page"><a  class="link" href="D:\Github_repo\Challenge\pages\technology-vehicle.html"> 03 &nbsp;&nbsp; Technology</a> </div>
+    </li>
 
-  Commander
-  Douglas Hurley
+  </ul>
+  <button class="hamburger"><img class="menu" src="D:\Github_repo\Challenge\assets\shared\icon-hamburger.svg" alt=""> </button>
+  <button class="close">
+    <img src="D:\Github_repo\Challenge\assets\shared\icon-close.svg" alt="">
+  </button>
+  <div class="meet-crew">
+    <span class="grey-num">02 </span> &nbsp MEET &nbsp YOUR &nbsp CREW
+  </div>
+  <div class="mainbody">
+    <div class="mainbody-left">
+      <div class="mainbody-left-rank">
+        COMMANDER
+      </div>
+      <div class="mainbody-left-name">
+        DOUGLAS HURLEY
+      </div>
+      <div class="mainbody-left-about">
+        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
+        and former NASA astronaut. He launched into space for the third time as
+        commander of Crew Dragon Demo-2.
+      </div>
+      <div class="mainbody-left-navbar">
+        <a href="D:\Github_repo\Challenge\pages\crew-commander.html"> <div class="nav-circle nav-circle-active"></div></a>
+        <a href="D:\Github_repo\Challenge\pages\crew-specialist.html"><div class="nav-circle"></div></a>
+        <a href="D:\Github_repo\Challenge\pages\crew-pilot.html"><div class="nav-circle"></div></a>
+        <a href="D:\Github_repo\Challenge\pages\crew-engineer.html"><div class="nav-circle"></div></a>
+      </div>
+    </div>
+    <div class="mainbody-right"><img class="crew-img" src="D:\Github_repo\Challenge\assets\crew\image-douglas-hurley.png" alt=""> </div>
 
-  Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-  and former NASA astronaut. He launched into space for the third time as 
-  commander of Crew Dragon Demo-2.
+  </div>
+
+  <script src="D:\Github_repo\Challenge\js\indexjs.js" charset="utf-8"></script>
+
 </body>
+
 </html>
